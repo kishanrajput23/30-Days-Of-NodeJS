@@ -1,5 +1,3 @@
-Question5: 
-
 ### Problem 5: File Extension Checker
 
 **Problem Statement:**
