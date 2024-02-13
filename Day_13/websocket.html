@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Example</title>
+</head>
+<body>
+    <h1>WebSocket Example</h1>
+    <script>
+        const ws = new WebSocket('ws://localhost:3000');
+
+        ws.onopen = () => {
+            console.log('WebSocket connection opened');
+            ws.send('Hello, WebSocket!');
+        };
+
+        ws.onmessage = (event) => {
+            console.log(`Received message: ${event.data}`);
+        };
+
+        ws.onclose = () => {
+            console.log('WebSocket connection closed');
+        };
+    </script>
+</body>
+</html>
