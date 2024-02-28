@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real Time Collaboration</title>
+</head>
+<body>
+  <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+  <script>
+    const socket = io();
+    socket.emit('message', 'Hello, server!');
+    socket.on('message', (data) => {
+      console.log('Message from server:', data);
+    });
+  </script>
+</body>
+</html>
